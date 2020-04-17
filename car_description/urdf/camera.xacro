@@ -34,22 +34,40 @@
         <sensor type="camera" name="camera1">
 	      <update_rate>30.0</update_rate>
 	      <camera name="head">
-	        <horizontal_fov>1.085</horizontal_fov>
+
+	        <horizontal_fov>${radians(62)}</horizontal_fov>
 	        <image>
-	          <width>320</width>
-	          <height>240</height>
+	          <width>800</width>
+	          <height>800</height>
 	          <format>R8G8B8</format>
 	        </image>
 	        <clip>
 	          <near>0.02</near>
 	          <far>300</far>
 	        </clip>
+	      
 	        <noise>
 	          <type>gaussian</type>
 	          <mean>0.0</mean>
-	          <stddev>0.012</stddev>
+	          <stddev>0.0</stddev>
 	        </noise>
+
+		    <distortion>
+		      <!-- radial -->
+		      <k1>0.0</k1>
+		      <k2>0.0</k2>
+		      <k3>0.0</k3>
+
+		      <!-- tangential -->
+		      <p1>-0.0</p1>
+		      <p2>-0.0</p2>
+		      
+		      <!-- distortion center (image center) -->
+		      <center>0.5 0.5</center>
+		    </distortion>
+
 	      </camera>
+
 	      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
 	        <alwaysOn>true</alwaysOn>
 	        <updateRate>30.0</updateRate>
