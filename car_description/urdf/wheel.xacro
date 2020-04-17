@@ -33,10 +33,5 @@
             <axis xyz="0 1 0"/>
         </joint>
 
-        <!--<gazebo reference="${name}">
-            <mu1>50</mu1>
-            <mu2>50</mu2>
-        </gazebo>-->
-
     </xacro:macro>    
 </robot>

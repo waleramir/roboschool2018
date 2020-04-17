@@ -22,9 +22,9 @@ include_directories(
   ${OpenCV_INCLUDE_DIRS}
 )
 
-add_executable(line_mover_cpp src/line_mover.cpp)
-target_link_libraries(line_mover_cpp
+add_executable(line_follower_cpp src/line_follower.cpp)
+target_link_libraries(line_follower_cpp
    ${catkin_LIBRARIES}
    ${OpenCV_LIBRARIES}
 )
-add_dependencies(line_mover_cpp ${catkin_EXPORTED_TARGETS})
+add_dependencies(line_follower_cpp ${catkin_EXPORTED_TARGETS})

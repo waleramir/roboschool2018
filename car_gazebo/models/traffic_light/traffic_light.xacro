@@ -28,19 +28,26 @@
       <link name="${color}">
           <visual name="${color}">
             <pose>0 -${box_depth/2 + 0.005} ${z} 1.57 0 0</pose>
+            
             <geometry>
               <cylinder>
                 <radius>${light_radius}</radius>
                 <length>0.01</length>
               </cylinder>
             </geometry>
+            
+            <!-- material -->
             <xacro:if value="${color == 'green'}">
               <xacro:green_mat/>
             </xacro:if>
+            
             <xacro:if value="${color == 'red'}">
               <xacro:red_mat/>
             </xacro:if>
+
+            <!-- light plugin -->
             <plugin name="${color}_plugin" filename="liblight_plugin.so"/>
+
           </visual>
         </link>
     </xacro:macro>
@@ -75,6 +82,7 @@
             </visual>            
         </link>
 
+        <!-- two light bulbs -->
         <xacro:light color="green" z="${base_height + box_height/4}"/>
         <xacro:light color="red" z="${base_height + 3*box_height/4}"/>
     </model>

@@ -6,12 +6,6 @@ from car_msgs.msg import MotorsControl
 from std_msgs.msg import Bool
 import sys, select, termios, tty
 
-def stop():
-    msg = MotorsControl()
-    msg.left = 0
-    msg.right = 0
-    stop_pub.publish(msg)
-
 def color(red, green):
     msg_green = Bool()
     msg_red = Bool()
@@ -39,7 +33,6 @@ if __name__ == '__main__':
 
     print('Easy contoller for gazebo car simulation')
     print('Controls:')
-    print('\ts - stop the car')
     print('\tr - turn on red signal')
     print('\tg - turn on green signal')
 
@@ -57,9 +50,6 @@ if __name__ == '__main__':
             elif key == 'r':
                 red()
                 rospy.loginfo('Red')
-            elif key == 's':
-                stop()
-                rospy.loginfo('Stop')
 
             rate.sleep()
     except Exception as e:
