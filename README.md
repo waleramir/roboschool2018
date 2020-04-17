@@ -28,7 +28,7 @@ Move a six-wheeled differential drive mobile robot along the colored line using 
 2. Clone the project into the workspace (**fork the repository beforehand**):
 
    ```bash
-   # replace the <user> with you login
+   # replace the <user> with your login
    git clone https://github.com/<user>/roboschool2018.git
    ```
 
