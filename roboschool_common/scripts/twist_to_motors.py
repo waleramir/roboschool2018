@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #coding=utf-8
 
 # Converts geometry_msg/Twist to car_msg/MotorsControl
@@ -16,7 +16,7 @@ def truncate(pwm):
 		return -MAX_PWM
 	if pwm > MAX_PWM:
 		return MAX_PWM
-	return pwm
+	return int(pwm)
 
 # Convert Twit msg to MotorsControl msg
 def twist_callback(msg):

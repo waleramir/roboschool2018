@@ -9,7 +9,6 @@ void gazebo::CarPlugin::Load(physics::ModelPtr parent, sdf::ElementPtr sdf)
 
 	init_joints(sdf);
 	init_ros();
-
 }
 
 void gazebo::CarPlugin::init_joints(sdf::ElementPtr sdf)

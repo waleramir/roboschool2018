@@ -6,6 +6,7 @@
         <arg name="world_name" value="$(find car_gazebo)/worlds/track.world"/>
         <arg name="paused" value="True"/>
         <arg name="use_sim_time" value="True"/>
+        <arg name="verbose" value="True"/>
     </include>
 
     <!-- Load xacro, convert to URDF and spawn-->

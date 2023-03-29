@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(car_hackathon)
 
-set (CMAKE_CXX_STANDARD 14)
+set (CMAKE_CXX_STANDARD 17)
 
 find_package(catkin REQUIRED COMPONENTS
   rospy
@@ -9,13 +9,12 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   car_msgs
   cv_bridge
+  image_transport
 )
-find_package(OpenCV)
 
-catkin_package(
-  CATKIN_DEPENDS roscpp rospy car_msgs
-  DEPENDS opencv
-)
+find_package(OpenCV 4 REQUIRED)
+
+catkin_package()
 
 include_directories(
   ${catkin_INCLUDE_DIRS}

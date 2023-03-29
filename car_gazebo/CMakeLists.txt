@@ -24,6 +24,3 @@ link_directories(${GAZEBO_LIBRARY_DIRS})
 add_library(car_plugin SHARED src/CarPlugin/CarPlugin.cpp)
 target_link_libraries(car_plugin ${GAZEBO_LIBRARIES})
 add_dependencies(car_plugin ${catkin_EXPORTED_TARGETS})
-
-add_library(light_plugin SHARED src/LightPlugin/LightPlugin.cpp)
-target_link_libraries(light_plugin ${GAZEBO_LIBRARIES})
